@@ -15,7 +15,7 @@ const eqArrays = function(array1, array2) {
 
   let equal;
 
-  for (let i = 0; i < array1.length; i++){
+  for (let i = 0; i < array1.length; i++) {
 
     equal = array1[i] === array2[i];
 
@@ -23,6 +23,8 @@ const eqArrays = function(array1, array2) {
 
   }
 
-  return equal;
+  return array1.length === array2.length ? equal : false;
 
 };
+
+console.log(eqArrays([ '2', 3 ], [ '2', 3, 4 ]))
