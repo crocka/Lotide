@@ -1,10 +1,12 @@
+const _ = require('./index');
+
 const takeUntil = function(array, callback) {
   
   const results = [];
 
   for (let item of array) {
 
-    if (callback (item)) {
+    if (callback(item)) {
 
       break;
 
@@ -17,3 +19,5 @@ const takeUntil = function(array, callback) {
   return results;
 
 };
+
+module.exports = takeUntil;

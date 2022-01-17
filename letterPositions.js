@@ -1,3 +1,5 @@
+const _ = require('./index');
+
 const letterPositions = function(input) {
 
   const results = {};
@@ -12,4 +14,5 @@ const letterPositions = function(input) {
 
 };
 
-console.log(letterPositions("lighthouse in the house"));
+module.exports = letterPositions;
+

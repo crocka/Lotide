@@ -1,3 +1,5 @@
+const _ = require('./index');
+
 const findKeyByValue = function(targetObject, targetKey) {
 
   let results = [];
@@ -8,6 +10,8 @@ const findKeyByValue = function(targetObject, targetKey) {
 
   }
  
-  return results;
+  return results.length !== 0 ? results : undefined;
 
 };
+
+module.exports = findKeyByValue;

@@ -1,4 +1,6 @@
 // FUNCTION IMPLEMENTATION
+const _ = require('./index');
+
 const assertEqual = function(actual, expected) {
 
   if (actual !== expected) {
@@ -12,6 +14,6 @@ const assertEqual = function(actual, expected) {
 
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+
+module.exports = assertEqual;
+

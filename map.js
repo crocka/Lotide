@@ -1,3 +1,5 @@
+const _ = require('./index');
+
 const map = function(array, callback) {
 
   const results = [];
@@ -11,3 +13,5 @@ const map = function(array, callback) {
   return results;
 
 };
+
+module.exports = map;
