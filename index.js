@@ -15,6 +15,7 @@ const letterPositions = require('./letterPositions');
 const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
+const eqObjectsRecursive = require('./eqObjectsRecursive');
 
 module.exports = {
   head,
@@ -33,4 +34,5 @@ module.exports = {
   map,
   takeUntil,
   without,
+  eqObjectsRecursive,
 };
