@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@crocka/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/crocka/Lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Carli",
+    "email" : "chino123abc@hotmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/crocka/Lotide/issues"
