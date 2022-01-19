@@ -8,7 +8,7 @@ const eqArrays = function(array1, array2) {
 
     equal = array1[i] === array2[i];
 
-    equal ? '' : equal = false;
+    if(!equal) {return false};
 
   }
 

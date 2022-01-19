@@ -1,10 +1,12 @@
-const eqObjectsRecursive = function(object1, object2) {
+const eqObjectsRecursive = function (object1, object2) {
 
   const _ = require('./index');
 
   const eqArrays = _.eqArrays;
 
   let result;
+
+  let index = 0;
 
   let objectKeys1 = Object.keys(object1);
 
@@ -16,26 +18,27 @@ const eqObjectsRecursive = function(object1, object2) {
 
   }
 
-  objectKeys1.every(key1 => {
+  while (index < objectKeys1.length) {
 
-    if (typeof object1[key1] === 'object' || typeof object2[key1] === 'object') {
+    if (typeof object1[objectKeys1[index]] === 'object' || typeof object2[objectKeys1[index]] === 'object') {
 
-      result = eqObjectsRecursive(object1[key1], object2[key1]);
+      result = eqObjectsRecursive(object1[objectKeys1[index]], object2[objectKeys1[index]]);
 
     } else {
 
-       result = (object1[key1] instanceof Array) ? eqArrays(object1[key1], object2[key1]) : (object1[key1] === object2[key1] ? true : false);
+      result = (object1[objectKeys1[index]] instanceof Array) ? eqArrays(object1[objectKeys1[index]], object2[objectKeys1[index]]) : (object1[objectKeys1[index]] === object2[objectKeys1[index]] ? true : false);
 
     }
 
-    if (result === false) {
+    if (!result) {
 
       return false;
 
     }
 
+    index++;
 
-  });
+  };
 
 
   return result;

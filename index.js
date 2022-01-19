@@ -16,6 +16,7 @@ const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 const eqObjectsRecursive = require('./eqObjectsRecursive');
+const eqArraysRecursive = require('./eqArraysRecursive');
 
 module.exports = {
   head,
@@ -35,4 +36,5 @@ module.exports = {
   takeUntil,
   without,
   eqObjectsRecursive,
+  eqArraysRecursive,
 };
